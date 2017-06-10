@@ -1,0 +1,187 @@
+@charset "utf-8";
+/* 重置 */
+html{ background-color: #f2f2f2;}
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin: 0;padding: 0;}
+body{ color: #333; background-color: #f2f2f2; text-align: center; overflow-x: hidden; font-family: Arial, sans-serif; height:100%;}
+label{ font-weight: normal;}
+li{list-style: none;}
+img{ border: none; vertical-align: inherit;}
+input,button,textarea{border: none; color: #333;}
+input[type="button"], input[type="submit"],button{ -webkit-appearance: none;}
+textarea {  -webkit-appearance: none; resize: none;}
+h1,h2,h3,h4,h5,h6,.h3{font-size: 100%; margin: 0;}
+a,a:link,a:visited,a:hover{text-decoration: none;color: #fff; }
+
+.cover { position: fixed; top :0 ; width :100% ;height : 100% ; background: #f5f5f5; opacity: 0.6; z-index: 98;}
+.tipBox { width : 40% ; margin : 0 auto ; height : 3rem ; background: #fff; border : 1px solid #BBB7B7 ; z-index: 101; position: relative;}
+.tipMsg {  height : 1.5rem ;line-height: 1.5rem; }
+.tipChange { height : 1.5rem ; line-height : 1.5rem; width: 100%;}
+.tipChange span:nth-child(1){ border-right: 1px solid #BBB7B7 ;}
+.tipChange span { width: 49.6% ; float: left;border-top : 1px solid #BBB7B7 ;}
+.row-line { width : 96% ; height : 1px ; background : #BBB7B7 ; margin : 0 auto ;}
+/*加载动画*/
+@-webkit-keyframes loading-3{
+	50%{ transform:scale(.4); -webkit-transform:scale(.4); opacity:.4}
+	100%{ transform:scale(1); -webkit-transform:scale(1); opacity:1}
+} 
+#loading { position: fixed; top : 45% ; width :60% ; height : 1.2rem ; background : #fff ;z-index: 101;left: calc(50% - 30% ); line-height: 1.2rem ; border:1px solid #E54539 ;}
+.loading-3 { position: relative; top : 0.65rem ; left: 1rem ; display: block; }
+.loading-3 i{ display:block; width:5px; height:5px; border-radius:50%; background-color:#e54539; position:absolute}
+.loading-3 i:nth-child(1){ bottom:-10px; left:0; -webkit-animation:loading-3 1s ease 0s infinite}
+.loading-3 i:nth-child(2){ bottom:-6.8px;left:6.8px; -webkit-animation:loading-3 1s ease -.12s infinite}
+.loading-3 i:nth-child(3){ bottom:0; left:10px; -webkit-animation:loading-3 1s ease -.24s infinite}
+.loading-3 i:nth-child(4){ bottom:6.8px; left:6.8px; -webkit-animation:loading-3 1s ease -.36s infinite}
+.loading-3 i:nth-child(5){ bottom:10px; left:0; -webkit-animation:loading-3 1s ease -.48s infinite}
+.loading-3 i:nth-child(6){ bottom:6.8px; left:-6.8px; -webkit-animation:loading-3 1s ease -.6s infinite}
+.loading-3 i:nth-child(7){ bottom:0;left:-10px; -webkit-animation:loading-3 1s ease -.72s infinite}
+.loading-3 i:nth-child(8){ bottom:-6.8px; left:-6.8px; -webkit-animation:loading-3 1s ease -.84s infinite}
+
+
+
+#logo {height : 100% ; position: fixed; top: 0; width : 100% ; background-color: #f2f2f2;}
+#logo input { height : 1rem ; width :80% ; height:1rem ; line-height: 1rem ; margin : 0.5rem 0 ;  }
+#logo .num {padding-left:1rem  ;}
+#logo p { text-align: right ; margin-right : 0.416rem ; }
+#logo a { color : #a6a6a6 !important; }
+#logo .btn { color : #fff; background : #e54539 ; width : 90% ;}
+	
+#register {height : 100% ; position: fixed; top: 0; width : 100% ; background-color: #f2f2f2;}
+#register form {height : 100% ; position: fixed; top: 0; width : 100% ;}
+#register #phone { position: absolute; top : 1rem ; left: 1rem;}
+#register #verifycode { position: absolute; top : 3rem ; left: 1rem;}
+#register #pwd {  position: absolute; top : 5rem ;  left: 1rem; }
+#register #btn {  position: absolute; top : 1rem ; right : 1rem ; height : 1rem ;  line-height: 1rem ; padding: 0.1rem 0.25rem; width: 3rem ;}
+#register input { height : 1rem ; width :7rem ; height:1rem ; line-height: 1rem ;}
+#register .num {padding-left:1rem  ;}
+#register p { text-align: right ; margin-right : 0.416rem ; }
+#register .btn { color : #fff; background : #e54539 ; width : 8rem ;position: absolute; top : 7rem ; left: 1rem;}
+
+#change { height : 100% ; position: fixed; top: 0; width : 100% ; background-color: #f2f2f2; }	
+#change div { position: relative;}
+#change .first {  margin-top :5rem ; }
+#change .second {  margin-top :2rem ; }
+#change img { width : 15%; position: absolute; left: 25%; top : 30% ;}	
+#change p { border : 1px solid #E54539 ; background : #fff ; width : 6rem ; margin : 0 auto ; border-radius: 15px ; height : 1.2rem ; line-height: 1.2rem ; box-shadow: 1px 1px 1px #E54539;}
+#change p a { color : #333 ; width : 100% ; height : 100% ; display: inline-block; }
+
+#headT { width : 100% ; height : 1rem ; background : #E54539 ; }
+#headT img { width :6% ; }
+#headT .tell { float: left; margin : 0.2rem ;}
+#headT .set { float: right; margin : 0.18rem ; }
+
+
+#bizHome .mainBack { background: #fff; height : 5.3rem ; width : 100%; border-bottom: 2px solid #bbb7b7;}
+#bizHome .main { border: 1px solid #E54539; height: 5rem; margin : 0.25rem ; position: relative;}
+#bizHome .main .img { height : 1rem ; width: 1rem ; border-radius: 50% ;margin : 0.2rem auto; overflow: hidden;}
+#bizHome .main .img img { height : 100% ; width : 100% ;  }
+#bizHome .main .store { position: absolute; left : 6.7rem ; top : 0.2rem ; text-align: left;}
+#bizHome .main .users { position: absolute; left : 6.7rem ; top : 0.7rem ;text-align: left;}
+#bizHome .main p { text-align: left; margin :0.25rem 0.55rem ; }
+#bizHome .box { background : #fff ; margin-top :0.5rem ; position: fixed; bottom: 0;}
+#bizHome .box .boxFirst { width : 100% ; }
+#bizHome .box .boxFirst div{ width : 39% ;height : 1rem ; border : 1px solid #E54539 ; line-height: 1rem; display: inline-table; margin : 0.2rem 0.3rem 0; border-radius: 15px; position: relative;}
+/*#bizHome .box .boxFirst div .leftT{ position: relative; left: 0.25rem ; }*/
+#bizHome .box .boxFirst img { width : 18% ; position: absolute; top : 0.55rem ; left: 0.4rem;}
+#bizHome .box .boxSecond { width : 100% ; color : #fff ;}
+#bizHome .box .boxSecond div{ width : 39% ;height : 1rem ;line-height: 1rem; display: inline-table; margin : 0.3rem 0.3rem ;position: relative; background: url(../images/backgroundN.png) no-repeat; background-size :100% ;}
+#bizHome .box .boxThree {  width : 100% ; }
+#bizHome .box .boxThree .b5 { border : 1px solid #B5B5B5 ; }
+#bizHome .box .boxThree .caa { border : 1px solid #caaaab ; }
+#bizHome .box .boxThree .caa .today{ background : #caaaab !important;}
+#bizHome .box .boxThree .e1 { border : 1px solid #e1a1a1 ; }
+#bizHome .box .boxThree .e1 .today{ background : #e1a1a1 !important;}
+#bizHome .box .boxThree .line { width : 1px ; height :1rem ; line-height: 1.5rem ; background: #B5B5B5; position: absolute; top : calc( 1rem - 0.75rem ) ; right : 3rem ;}
+#bizHome .box .boxThree .money {display: flex; display: -webkit-flex; margin: 0.15rem 0.8rem; height : 1.5rem ; line-height: 1.5rem; border-radius: 8px; overflow: hidden; position: relative;}
+#bizHome .box .boxThree .money p { height: 0.525rem; line-height: 1.05rem; }
+#bizHome .box .boxThree .money .today { background: #b5b5b5; width :1.5rem ; }
+#bizHome .box .boxThree .money .give { width : 4rem ;}
+#bizHome .box .boxThree .money .get p {width : 3rem ;} 
+#bizHome .box .pay { color : #E54539; border : 1px solid #E54539 ; height : 1.5rem ; line-height: 1.5rem ; padding: 0.25rem 3rem; border-radius: 18px; font-size : 18px ;}
+
+
+#tell header { width : 100% ; height : 1.5rem ; line-height: 1.5rem ; background : #E54539 ; color : #fff ;}
+/*#tell header .box { border : 1px solid #fff;display: inline; padding: 0.3rem 0.3rem ; border : 1px solid #fff ; display: inline; height : 1rem ; line-height:  1rem ; border-radius: 25px;}
+#tell header .btn:nth-child(1){ border-right : 1px solid #fff;}
+#tell header .btn {display: inline-block;padding : 0 0.5rem ;}*/
+#tell header .box { border-radius: 25px; border : 1px solid #fff;display: inline-block; height : 1rem ;line-height: 1rem ;}
+#tell header .btn1 { height : 1rem ; width : 3rem ; display: inline-block; line-height: 1rem ; border-bottom-left-radius: 25px; border-top-left-radius: 25px;}
+#tell header .btn2 { height : 1rem ; width : 3rem ; display: inline-block; line-height: 1rem ; border-bottom-right-radius: 25px; border-top-right-radius: 25px;}
+
+
+#system .box { border : 1px solid #BBB7B7 ; margin : 0.25rem ; text-align: left; height : 4rem ; position: relative;}
+#system .box a {width: 100%; height: 100%;display: inline-block;position: absolute;top: 0; }
+#system .box .row-line{ margin-top : 0.25rem ; }
+#system .box p { margin : 0.25rem 0 0 0.25rem ; }
+#system .box .textL { text-indent: 1em; margin : 0.25rem 0.6rem 0.25rem 0.8rem ;display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;max-width: 100%; height : 1rem}
+#system .box p span { float: right; margin-right : 0.25rem ; }
+
+#deposit .box { border : 1px solid #BBB7B7 ; margin : 0.25rem ; text-align: left; height : 4rem ; }
+#deposit .box .row-line{ margin-top : 0.25rem ; }
+#deposit .box p { margin : 0.25rem 0 0 0.25rem ; }
+#deposit .box .textL { text-indent: 1em; margin : 0.25rem 0.6rem 0.25rem 0.8rem ;display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;max-width: 100%;}
+#deposit .box p span { float: right; margin-right : 0.25rem ; }
+#deposit .box a {width: 100%; height: 100%;display: inline-block;position: absolute;top: 0; }
+
+#systemDetail { margin : 0.25rem ; }
+#systemDetail .box { border-bottom: 1px solid #BBB7B7; box-shadow: 2px 2px 1px #BBB7B7; background: #fff;}
+#systemDetail .box p{ margin : 0.35rem ; }
+#systemDetail .box .tell { padding-top : 1.35rem ; margin-top : 0 ;}
+#systemDetail .box .company { text-align: right; margin-right : 1.25rem ; }
+#systemDetail .box .time { text-align: right; margin-right : 0.45rem ; }
+#systemDetail .box .text { min-height: 2rem ; text-indent: 2em ; text-align: left; }
+
+#depositDetail { background: #fff; height : 5rem ; border-bottom: 1px solid #BBB7B7; box-shadow: 2px 2px 1px #BBB7B7; margin:0.25rem ;}
+#depositDetail p { text-align: left;  margin : 0.35rem 0.55rem ;  }
+#depositDetail .tip { padding-top : 0.35rem ; margin-top : 0 ; font-size : 16px ;}
+
+#set .img { width : 3rem ; height : 3rem ; margin : 1rem auto ;}
+#set .img img { width : 100% ; height : 100% ; }
+#set .box p { margin : 0; text-align: left; height : 1rem ; line-height: 1rem; width : 100% ; background: #fff; border-bottom: 1px solid #BBB7B7;text-indent: 1em;position: relative;}
+#set .box p a { color : #333 ;  width : 100% ; height : 100% ; display: inline; position: absolute;top : 0; left: 0;}
+#set .box p span { float: right ; margin-right: 0.416rem ; }
+/*#set .box { height: 4rem ; background: #fff; width: 100% ; line-height: 1rem ;}*/
+#set .btn p { border: 1px solid #E54539; width : 20% ; margin : 2rem auto; background: #fff;padding: 0.45rem 1.05rem; border-radius: 25px; position: relative;line-height: 1rem ;}
+#set .btn p a { color : #333; width : 100% ; height : 100% ; display: inline; position: absolute;top : 0; left: 0;}
+
+#setBindPay .setBindPay p { width : 100% ;text-align: left; background: #fff; padding-left: 0.416rem; border-bottom: 1px solid #BBB7B7;}
+#setBindPay .setBindPay p span { line-height: 1rem;  display: inline-block; margin : 0.25rem 0; font-size: 16px ;}
+#setBindPay .setBindPay p .img { width :1rem ; margin-right : 0.416rem}
+#setBindPay .setBindPay p .img img { width : 100% ; height : 100% ; vertical-align:middle}
+#setBindPay .setBindPay p .iphone { float: right; font-size: 14px;margin-right : 0.25rem;}
+#setBindPay .setBindPay p .bind { float: right ; margin-right : 0.916rem; font-size: 14px;color : #BBB7B7; border : 1px solid #E54539; line-height: 0.5rem; height: 0.5rem; padding: 0.05rem 0.25rem; border-radius: 15px;  position: relative; top: 0.2rem; color : #E54539;}
+#setBindPay .setBindPay p .unbind { border : 1px solid #E54539; line-height: 0.5rem; height: 0.5rem; padding: 0.05rem 0.25rem; border-radius: 15px; position: relative; top: 0.2rem; color : #E54539;}
+
+
+#bindWechat input {margin-top : 0.5rem ; width : 100% ; height : 1rem ; line-height:  1rem; padding-left: 0.75rem;}
+#bindWechat button { width : 5rem ; height : 1rem ; background: #fff; border: 1px solid #E54539 ; border-radius: 15px ; margin-top : 1rem ;}
+
+#bindCard div p { width : 100% ; background: #fff; text-align: left; position: relative; height : 1rem ; line-height:  1rem; border-bottom: 1px solid #BBB7B7;}
+#bindCard div p:nth-child(1){ margin-top : 0.5rem ;}
+#bindCard div p span { margin-left : 0.25rem }
+#bindCard div p input { width : 75% ; height : 1rem ; line-height:  1rem; position: absolute; left: 1.8rem;}
+#bindCard button { width : 5rem ; height : 1rem ; background: #fff; border: 1px solid #E54539 ; border-radius: 15px ; margin-top : 1rem ;}
+
+
+#setChangeLogoPwd div p { width : 100% ; background: #fff; text-align: left; position: relative; height : 1rem ; line-height:  1rem; border-bottom: 1px solid #BBB7B7;}
+#setChangeLogoPwd div p:nth-child(1){ margin-top : 0.5rem ;}
+#setChangeLogoPwd div p span { margin-left : 0.25rem }
+#setChangeLogoPwd div p input { width : 75% ; height : 1rem ; line-height:  1rem; position: absolute; left: 1.8rem;}
+#setChangeLogoPwd button { width : 5rem ; height : 1rem ; background: #fff; border: 1px solid #E54539 ; border-radius: 15px ; margin-top : 1rem ;}
+
+#validatePwd input { width : 90% ; height : 1rem ; line-height: 1rem ; margin: 5rem auto 0; border: 1px solid #BBB7B7; }
+#validatePwd button{ width : 5rem ; height : 1rem ; background: #fff; border: 1px solid #E54539 ; border-radius: 15px ; margin-top : 1rem ;}
+
+#communityList .search { background: #fff; height : 1.2rem ;line-height: 1.2rem ;margin-bottom: 0.5rem ;border-bottom: 1px solid #BBB7B7; box-shadow: 2px 2px 1px #BBB7B7; }
+#communityList .search input::-ms-input-placeholder{text-align: center;}
+#communityList .search input::-webkit-input-placeholder{text-align: center;}
+#communityList .search input { width : 6rem ; height : 0.8rem ; border: 0.8px solid #BBB7B7; border-radius: 35px ; padding: 0 0.45rem; text-align:center;}
+#communityList .box{ height : 2.5rem ; background : #fff;  border-bottom:1px solid #BBB7B7}
+#communityList .box div { display: inline-block;}
+#communityList .box .img { float: left; width : 1.7rem ; height : 1.7rem ; margin : 0.4rem ;border-radius: 50% ; overflow: hidden;}
+#communityList .box .img img { width : 100% ; height : 100% ; }
+#communityList .box .text {  float: left; width : 50% ; height : 1.7rem ;  margin : 0.4rem ; text-align: left;}
+#communityList .box .text .title { font-size: 16px; margin-bottom : 0.25rem}
+#communityList .box .text .address { height : 1rem ;overflow: hidden; }
+#communityList .box .text .address img { width : 5% ; }
+#communityList .box .goBack { float: right; margin-right : 0.416rem ; width : 0.25rem;  margin : 0.4rem ;height : 0.45rem ;line-height: 2rem;}
+#communityList .box .goBack img { width: 100%; height: 100%; }
