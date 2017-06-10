@@ -9,7 +9,7 @@
 		<img src="../assets/images/adv.png" alt="" />
 	</div>
   </div>
-  
+
 </template>
 
 <script>
@@ -18,13 +18,14 @@ export default {
   data () {
   	document.title = "选择频道"
     return {
-				
+
     }
   },
 
   methods:{
   	btn(){
-  		this.$router.push({ path: 'bizHome',query:{token :this.$route.query.token,agentid : this.$route.query.agentid ,agentchannel:this.$route.query.agentchannel,agenttype:this.$route.query.agenttype}}) 
+  	    console.log("git success!!!!!!!!!!")
+  		this.$router.push({ path: 'bizHome',query:{token :this.$route.query.token,agentid : this.$route.query.agentid ,agentchannel:this.$route.query.agentchannel,agenttype:this.$route.query.agenttype}})
   	}
 	},
 }
