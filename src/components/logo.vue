@@ -42,25 +42,24 @@ export default {
   	Submit(){
   		var phone = this.$refs.phone.value
   		var pwd = this.$refs.pwd.value
-		axios.post("http://118.190.132.104:8080/WRHAgent/agentlogin",$("form").serialize()).then((res) => {
-          if(res.data.code == 1){
-          	this.comData = res.data.data
-          	console.log(this.comData)
-          	var objStr = this.comData
-          	thisData.saveStorage(objStr)
-          	this.$router.push({ path: 'change'}) 
-          }else{
-					    var tip = $(".error-tip");
-					    if(!tip.is(":visible")){
-					    	this.msges = res.data.msg
-					        tip.show();
-					        setTimeout(function(){
-					            tip.html('');
-					            tip.hide();
-					        },2000);
-					    }
-          }
-      })
+			axios.post("http://118.190.132.104:8080/WRHAgent/agentlogin",$("form").serialize()).then((res) => {
+	          if(res.data.code == 1){
+	          	this.comData = res.data.data
+	          	var objStr = this.comData
+	          	thisData.saveStorage(objStr)
+	          	this.$router.push({ path: 'change'}) 
+	          }else{
+						    var tip = $(".error-tip");
+						    if(!tip.is(":visible")){
+						    	this.msges = res.data.msg
+						        tip.show();
+						        setTimeout(function(){
+						            tip.html('');
+						            tip.hide();
+						        },2000);
+						    }
+	          }
+	      })
 
   	}
   }
