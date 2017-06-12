@@ -23,6 +23,7 @@ import depositDetail from '@/components/home/tell/children/depositDetail'
 import loading from '@/components/loading'
 import setWechatTitle from '@/components/setWechatTitle'
 import communityList from '@/components/home/community/communityList'
+import communityDetail from '@/components/home/community/communityDetail'
 
 //import webapi from '@/components/webapi'
 Vue.use(Router)
@@ -50,7 +51,8 @@ export default new Router({
 					  {path: '/systemDetail',name: 'systemDetail',component: systemDetail},
 					  {path: '/depositDetail',name: 'depositDetail',component: depositDetail},
 					  {path: '/communityList',name: 'communityList',component: communityList},
-					  
+            {path: '/communityDetail',name: 'communityDetail',component: communityDetail},
+
   ],
 //
 //router.afterEach((transition) => {
