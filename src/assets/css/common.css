@@ -83,7 +83,8 @@ a,a:link,a:visited,a:hover{text-decoration: none;color: #fff; }
 /*#bizHome .box .boxFirst div .leftT{ position: relative; left: 0.25rem ; }*/
 #bizHome .box .boxFirst img { width : 18% ; position: absolute; top : 0.55rem ; left: 0.4rem;}
 #bizHome .box .boxSecond { width : 100% ; color : #fff ;}
-#bizHome .box .boxSecond div{ width : 39% ;height : 1rem ;line-height: 1rem; display: inline-table; margin : 0.3rem 0.3rem ;position: relative; background: url(../images/backgroundN.png) no-repeat; background-size :100% ;}
+#bizHome .box .boxSecond div{ width : 39% ;height : 1rem ;line-height: 1rem; display: inline-table; margin : 0.3rem 0.3rem ; background: url(../images/backgroundN.png) no-repeat; background-size :100% ;}
+#bizHome .box .boxSecond div a { width : 100% ; height : 100% ; display: block ; z-index: 99 ; position: relative; }
 #bizHome .box .boxThree {  width : 100% ; }
 #bizHome .box .boxThree .b5 { border : 1px solid #B5B5B5 ; }
 #bizHome .box .boxThree .caa { border : 1px solid #caaaab ; }
@@ -202,8 +203,25 @@ a,a:link,a:visited,a:hover{text-decoration: none;color: #fff; }
 #communityDetail .title {  margin : 0.616rem 0 ; }
 #communityDetail .title span{ background : #bbb7b7 ; color : #fff ; padding: 0.316rem 1.8rem ; border-radius: 5px ; }
 #communityDetail .money {  margin : 0.316rem auto 0; border : 1px solid #e1a1a1 ; width : 86% ; }
-#communityDetail .money span { width : 50% ;
-  float: left; }
+#communityDetail .money span { width : 50% ; float: left; }
 #communityDetail .money p { height : 0.9rem ; line-height : 0.9rem ; width: 100% ; }
 #communityDetail .e1 { background : #e1a1a1 ; color : #fff ;}
 #communityDetail .e2 { background : #fff ; color : #333 ;}
+
+
+#orderDeal .date p{ text-align: left ; margin :0.65rem ; font-size: 16px ; }
+#orderDeal .date p img {  float: right; width : 6% ;}
+#orderDeal .title {  margin : 0.616rem 0 ; }
+#orderDeal .title span{ background : #bbb7b7 ; color : #fff ; padding: 0.316rem 1.8rem ; border-radius: 5px ; }
+#orderDeal .money {  margin : 0.316rem auto 0; border : 1px solid #e1a1a1 ; width : 86% ; }
+#orderDeal .money span { width : 50% ; float: left; }
+#orderDeal .money p { height : 0.9rem ; line-height : 0.9rem ; width: 100% ; }
+#orderDeal .e1 { background : #e1a1a1 ; color : #fff ;}
+#orderDeal .e2 { background : #fff ; color : #333 ;}
+
+
+#date .box { width : 100% ;height : 5rem ; overflow: hidden ; background: #fff; position: fixed;bottom: 0;}
+#date .box ul{ width : 49% ; float: left;  }
+#date .box ul li { margin : 0.45rem 0 ; font-size: 18px ;}
+#date .box .swiper-wrapper { height: 3rem !important; ; }
+#date .box .swiper-slide { height : 0.5rem !important; line-height :0.5rem ; }

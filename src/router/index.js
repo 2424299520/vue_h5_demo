@@ -24,8 +24,9 @@ import loading from '@/components/loading'
 import setWechatTitle from '@/components/setWechatTitle'
 import communityList from '@/components/home/community/communityList'
 import communityDetail from '@/components/home/community/communityDetail'
+import orderDeal from '@/components/home/orderDeal/orderDeal'
+import date from '@/components/home/orderDeal/date'
 
-//import webapi from '@/components/webapi'
 Vue.use(Router)
 
 export default new Router({
@@ -52,6 +53,8 @@ export default new Router({
 					  {path: '/depositDetail',name: 'depositDetail',component: depositDetail},
 					  {path: '/communityList',name: 'communityList',component: communityList},
             {path: '/communityDetail',name: 'communityDetail',component: communityDetail},
+            {path: '/orderDeal',name: 'orderDeal',component: orderDeal},
+            {path: '/date',name: 'date',component: date},
 
   ],
 //

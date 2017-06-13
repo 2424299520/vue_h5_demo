@@ -7,9 +7,9 @@ import router from './router'
 import "./assets/js/flexible_css.debug.js"
 import "./assets/js/flexible.debug.js"
 import "./assets/css/common.css"
-
+import VueAwesomeSwiper from 'vue-awesome-swiper'
 Vue.config.productionTip = false
-
+Vue.use(VueAwesomeSwiper)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

@@ -11,19 +11,19 @@
 					<p>账号：<span>{{iphone}}</span></p>
 					<p>代理区域：<span>{{users.agentarea}}</span></p>
 					<p>代理频道：<span>{{agenttype}}</span></p>
-					<p>代理期限：<span>{{users.stopdate}} 到期</span></p>					
+					<p>代理期限：<span>{{users.stopdate}} 到期</span></p>
 				</div>
 			</div>
-			<div class='box'> 
+			<div class='box'>
 					<div class='boxFirst' @click='goCommunityList' >
 							<div>
 								<span class='leftT'>社区<span>({{users.communitynum}})</span></span>
 							</div>
 					</div>
-					
+
 					<div class='boxSecond'>
-						<div>
-							<p>总交易金额</p>
+						<div @click="goOrderDeal">
+              <p>总交易金额</p>
 							<p>{{users.totaltrade}}元</p>
 						</div>
 						<div>
@@ -67,7 +67,7 @@
 									<p>收益</p>
 									<p>{{users.monthincome}}元</p>
 								</div>
-						</div>			
+						</div>
 
 					</div>
 						<router-link class='pay' to='/'>提现</router-link>
@@ -81,7 +81,7 @@
 	import loading from '@/components/loading'
 	import $ from 'jquery'
 	import axios from 'axios'
-	
+
 export default {
   name: 'bizHome',
   data () {
@@ -101,12 +101,12 @@ export default {
   },
   methods:{
   	_init(){
-  		
-  		  	var storage = window.localStorage;    
-			    var token = storage["token"];    
-			    var agentid = storage["agentid"];  
-			    var agentchannel = storage["agentchannel"];  
-			    var agenttype = storage["agenttype"];  
+
+  		  	var storage = window.localStorage;
+			    var token = storage["token"];
+			    var agentid = storage["agentid"];
+			    var agentchannel = storage["agentchannel"];
+			    var agenttype = storage["agenttype"];
 
 					this.ifShow = true
 					axios.get("http://118.190.132.104:8080/WRHAgent/agentcenter",{params: {token:token,agentid:agentid,channel:agentchannel,agentlevel:agenttype}}).then((res) => {
@@ -129,14 +129,17 @@ export default {
   			},
   	goCommunityList(){
   			this.$router.push('communityList')
-  	}
-
+  	},
+    goOrderDeal(){
+  	    console.log("1")
+        this.$router.push('orderDeal')
+    }
 	},
   computed :{
   	agenttype : function(){
 				if(this.users.channel == 0){
 					return "全部"
-				}else if(this.users.channel == 1){					
+				}else if(this.users.channel == 1){
 					return "商业街"
 				}else if(this.users.channel == 2){
 					return "精准广告"
@@ -145,7 +148,7 @@ export default {
   	iphone (){
   		if(this.users.account){
 	  		var str = this.users.account
-	  		var str2 = str.substr(0,3)+"****"+str.substr(7);  
+	  		var str2 = str.substr(0,3)+"****"+str.substr(7);
 	  		return str2
   		}
 

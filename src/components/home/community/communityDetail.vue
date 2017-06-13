@@ -23,7 +23,7 @@
           <span>日期</span>
           <span>交易额</span>
       </div>
-      <div class="money e1" v-for="item in list" :class="{ 'e2' : e2}">
+      <div class="money e1" v-for="item in list">
         <p>
          <span>{{item.data}}</span>
          <span>{{item.text}}元</span>
@@ -47,20 +47,7 @@
           e3 : false,
         e1 : "e1",
         e2 : 'e2',
-        list :[
-          {
-              data:"2017-6-19",
-              text : 6478332
-          },
-          {
-            data:"2017-6-9",
-            text : 6478332
-          },
-          {
-            data:"2017-6-29",
-            text : 6478332
-          },
-        ]
+        list :[ ]
     		}
   		},
     created(){
@@ -68,12 +55,6 @@
     },
     methods: {
       _init(typeNumber){
-          for(var i = 0 ; i <= this.list.length ; i++){
-            if(i % 2 == 1){
-              console.log(this.e2)
-              this.e2 = true;
-            }
-        }
         var self = this;
         var storage = window.localStorage;
         var token = storage["token"];
@@ -84,13 +65,20 @@
         }else{
             typeNumber
         }
+//        axios.get('http://127.0.0.1:8080/cms/app.json').then((res) => {
+//          self.list = res.data.list;
+//          console.log(self.list)
+//            for(var i = 0 ; i <= self.list.length ; i++){
+//              var listI = self.list[i];
+//              console.log(listI)
+//            }
+//
+//        });
         axios.get('http://118.190.132.104:8080/WRHAgent/commnuitytrade', {params: {token: token,agentid: agentid,areaid: areaid,type:typeNumber,channel:0,pageno: 1, pagesize: 15} }).then(function (res) {
           if (res.data.code == 1) {
             self.community = res.data.data;
-            console.log(self.community.list)
           } else {
             console.log(res.data.msg);
-            console.log(res.data)
           }
         })
       },

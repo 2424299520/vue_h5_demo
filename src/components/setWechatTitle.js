@@ -81,5 +81,10 @@ export default{
 	    .then(val => callback(null, val))
 	    .catch(e => callback(e))
 	},
-
+  toArray(obj){
+    if($.isArray(obj)) return obj;
+    else{
+      return [obj];
+    }
+  }
 }
